@@ -1,12 +1,35 @@
-import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { AddTask } from './add-task/add-task';
+import { TasksListComponent } from './tasks-list/tasks-list';
+import { TaskService } from './services/task.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [AddTask, TasksListComponent, RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected readonly title = signal('gestion-s12');
+export class App implements OnInit {
+  title = 'Gestión de Tareas - Evaluación S12';
+  tareas: string[] = [];
+
+  constructor(private taskService: TaskService) {}
+
+  ngOnInit(): void {
+    // cargar desde servicio al iniciar
+    this.tareas = this.taskService.getTasks();
+  }
+
+  agregarTarea(nueva: string) {
+    // AddTask ya agrega en el servicio; aquí solo recargamos la lista desde el servicio
+    this.tareas = this.taskService.getTasks();
+  }
+
+  eliminarTarea(index: number) {
+    // eliminar via servicio y recargar
+    this.taskService.deleteTask(index);
+    this.tareas = this.taskService.getTasks();
+  }
 }

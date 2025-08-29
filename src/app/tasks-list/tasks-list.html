@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let tarea of tareas; let i = index">
+    {{ tarea }}
+    <button (click)="deleteTask(i)">Eliminar</button>
+  </li>
+</ul>

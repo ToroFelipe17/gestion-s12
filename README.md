@@ -1,59 +1,86 @@
-# GestionS12
+# Gestión de Tareas - Evaluación S12 📝
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
+Proyecto desarrollado en **Angular 20** como parte de la **Evaluación S12** del curso *Programación Front-End*.  
+El objetivo fue construir un sistema de gestión de tareas con persistencia en **localStorage**, aplicando buenas prácticas de modularidad, componentes reutilizables y diseño responsivo.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🎯 Objetivos alcanzados
+- Creación de un proyecto Angular con `ng new gestion-s12`.
+- Desarrollo de **componentes**:  
+  - `AddTaskComponent`: permite ingresar nuevas tareas.  
+  - `TasksListComponent`: muestra las tareas registradas y habilita su eliminación.  
+- Implementación de un **servicio (`task.service.ts`)** para gestionar las tareas y almacenarlas en `localStorage`.  
+- Persistencia: las tareas permanecen en memoria al refrescar la página.  
+- Estilos personalizados con animaciones y gradientes modernos.  
+- Evidencias visuales documentadas en carpeta `/docs`.
 
-```bash
+---
+
+## 🚀 Ejecución del proyecto
+
+   git clone https://github.com/ToroFelipe17/gestion-s12.git
+   cd gestion-s12
+
+Instalar dependencias:
+
+npm install
+Levantar el servidor local:
+
 ng serve
-```
+Abrir navegador en:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+http://localhost:.../
 
-## Code scaffolding
+📂 Estructura relevante del proyecto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+gestion-s12/
+│
+├── src/
+│   ├── app/
+│   │   ├── add-task/        # Componente para agregar tareas
+│   │   ├── tasks-list/      # Componente para listar y eliminar tareas
+│   │   ├── services/
+│   │   │   └── task.service.ts   # Lógica central: persistencia en localStorage
+│   │   ├── app.component.html    # Vista principal con integración de componentes
+│   │   └── app.component.css     # Estilos principales
+│   │
+│   └── assets/              # Recursos estáticos (imágenes, íconos, etc.)
+│
+├── docs/
+│   ├── ANEXO.md             # Evidencias con pantallazos y explicaciones
+│   └── /images/             # Capturas de instalación y pruebas
+│
+└── README.md
 
-```bash
-ng generate component component-name
-```
+📸 Evidencias
+Las capturas de pantalla con explicaciones detalladas se encuentran en:
+📁 docs/ANEXO.md
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Ahí se incluyen:
 
-```bash
-ng generate --help
-```
+Instalación de Angular y creación del proyecto.
 
-## Building
+Generación de componentes (tasks-list, add-task).
 
-To build the project run:
+Ejecución del servidor (ng serve).
 
-```bash
-ng build
-```
+Creación y uso del servicio task.service.ts.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Persistencia en localStorage.
 
-## Running unit tests
+Estilos y mejoras visuales aplicadas.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+📚 Recursos utilizados
+Angular CLI v20.2.1
 
-```bash
-ng test
-```
+TypeScript para tipado y lógica.
 
-## Running end-to-end tests
+CSS3 con gradientes, animaciones y transiciones.
 
-For end-to-end (e2e) testing, run:
+localStorage API para persistencia.
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+👨‍💻 Autor
+Felipe Toro
+Estudiante de Ingeniería Informática
+Universidad Autónoma de Chile – 2025
