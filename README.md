@@ -36,24 +36,22 @@ El objetivo fue construir un sistema de gestión de tareas con persistencia en *
 
 ## 📂 Estructura relevante del proyecto
 
-gestion-s12/
-  ├── src/
-  │   ├── app/
-  │   │   ├── add-task/          # Componente para agregar tareas
-  │   │   ├── tasks-list/        # Componente para listar y eliminar tareas
-  │   │   ├── services/
-  │   │   │   └── task.service.ts  # Lógica central: persistencia en localStorage
-  │   │   ├── app.component.html   # Vista principal con integración de componentes
-  │   │   └── app.component.css    # Estilos principales
-  │   │
-  │   └── assets/               # Recursos estáticos (imágenes, íconos, etc.)
-  │
-  ├── docs/
-  │   ├── ANEXO.md              # Evidencias con pantallazos y explicaciones
-  │   └── /images/              # Capturas de instalación y pruebas
-  │
-  └── README.md
-
+- **gestion-s12/**
+  - **src/**
+    - **app/**
+      - `add-task/` → Componente para **agregar tareas**
+      - `tasks-list/` → Componente para **listar y eliminar tareas**
+      - **services/**
+        - `task.service.ts` → Lógica central: persistencia en **localStorage**
+      - `app.component.html` → Vista principal con integración de componentes
+      - `app.component.css` → Estilos principales
+    - **assets/** → Recursos estáticos (imágenes, íconos, etc.)
+  - **docs/**
+    - `ANEXO.md` → Evidencias con pantallazos y explicaciones
+    - `/images/` → Capturas de instalación y pruebas
+  - `README.md`
+    - `angular.json` → Configuración del proyecto Angular  
+    - `package.json` → Dependencias y scripts del proyecto
 
 ---
 
